@@ -56,33 +56,38 @@ const morseToLatin = {
   '....': "H"
 }
 
-
+//////////////////////// 1)
 function getLatinCharacterList(word) { // permet de retourné le texte (lolilol) en tableau
     return word.split(""); // permet de diviser une string (espace)
 }
 //console.log(getLatinCharacterList("lolilol"))
 
+
+//////////////////////// 2)
 function translateLatinCharacter(char) { // permet de changer une lettre en morse
     return latinToMorse[char]
 }
 // console.log(translateLatinCharacter("A"))
 
-function encode(word) {
+
+//////////////////////// 3)
+function encode(word) { // mettre du texte en morse 
     let letters = getLatinCharacterList(word);
     result = [];
     for (let i=0; i<letters.length; i++){
         let lettre = letters[i];
-        let lettreMaj = lettre.toUpperCase()
+        let lettreMaj = lettre.toUpperCase() // toUpperCase, majuscule
         let lettreMorse = translateLatinCharacter(lettreMaj);
         // ajout de la lettre morse dans le tableau
-        result.push(lettreMorse);
+        result.push(lettreMorse); // push, ajoute un ou plusieurs éléments dans le tableau dans lequel elle s'applique. voir web
     }
     // retourne le tableau de lettres morse
     return result;
 }
-//console.log(encode("toto"));
+// console.log(encode("toto"));
 
 
+//////////////////////// 4)
 function getMorseCharacterList(word) {
     return word.split(" ");
 }
@@ -126,11 +131,13 @@ function decode(sentence) {
 
 //console.log(decode("... --- ... / --- ... ---"))
 
-let latin = prompt("Gimme latin");
-alert(encode(latin));
 
-let morse = prompt("Gimme morse");
-alert(decode(morse));
+//////////////////////// 5)
+//let latin = prompt("Gimme latin");
+//alert(encode(latin));
+
+//let morse = prompt("Gimme morse");
+//alert(decode(morse));
 
 /*
 <html>

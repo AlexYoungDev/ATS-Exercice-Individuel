@@ -40,3 +40,4 @@ function guess() {
   if (result.wellPlaced.length === base.length) {
 	  document.getElementById("win").innerText = 'Vous avez gagné'
   }
+}

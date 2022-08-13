@@ -11,17 +11,22 @@ function sum1 (array) {
 
 // console.log(sum1([1, 2, 3, 4, 5]))
 
+// ? = condition terniaire
+// return (Alex) ? (oui/si) : (non/sinon)
+
 // Etape 2
 function sum2(array) {
     if (array.length === 0) {
     	return 0;
     } else {
-    	return array[0] + sum2(array.slice(1));
+    	return array[0] + sum2(array.slice(1)); // slice (tranche)
     }
 }
 
+// return array.lentgh == 0 ? 0 : array[0] + sum2  -> condition terniaire
+ 
 // Etape 3
-function factorial(x) {
+function factorial(x) { // factoriel f(5) = 5*4*3*2*1 = 120 
     if (x === 0) {
         return 1;
     } else {
